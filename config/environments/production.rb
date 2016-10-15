@@ -11,11 +11,16 @@ Rails.application.configure do
   config.eager_load = true
   # config/environments/production.rb
   config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => 'pinme12736'
-    }
+    storage: :s3,
+    :s3_credentials: {
+      :bucket: Env.fetch('pinme12736'),
+      access_key_id: ENV.fetch('AKIAIKZ63FHSPWOBUOGA'),
+      secret_access_key: ENV.fetch('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'),
+      s3_region: ENV.fetch('Oregon'),
+
   }
+}
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
