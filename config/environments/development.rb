@@ -13,8 +13,8 @@ Rails.application.configure do
     storage: :s3,
     :s3_credentials: {
       :bucket: Env.fetch('pinme12736'),
-      access_key_id: ENV.fetch('AKIAIKZ63FHSPWOBUOGA'),
-      secret_access_key: ENV.fetch('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'),
+      access_key_id: ENV.fetch(''),
+      secret_access_key: ENV.fetch(''),
       s3_region: ENV.fetch('Oregon'),
 
   }
